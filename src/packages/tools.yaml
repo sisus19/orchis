@@ -9,7 +9,6 @@ packages:
  - lm_sensors
  - meson
  - podman
- - scrcpy
  - skopeo
  - smartmontools
  - toolbox
