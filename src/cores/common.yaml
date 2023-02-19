@@ -19,13 +19,13 @@ repos:
 
 add-files: [
   # /etc
-  ["sysroot/etc/dconf/db/local.d/01-orchis", "/etc/dconf/db/local.d/01-orchis"],
-  ["sysroot/etc/dconf/profile/user", "/etc/dconf/profile/user"],
-  ["sysroot/etc/default/grub", "/etc/default/grub"],
-  ["sysroot/etc/systemd/system/dconf-update.service", "/etc/systemd/system/dconf-update.service"],
-  ["sysroot/etc/systemd/system/flatpak-automatic.service", "/etc/systemd/system/flatpak-automatic.service"],
-  ["sysroot/etc/systemd/system/flatpak-automatic.timer", "/etc/systemd/system/flatpak-automatic.timer"],
-  ["sysroot/etc/sysctl.conf", "/etc/sysctl.conf"]
+  ["../sysroot/etc/dconf/db/local.d/01-orchis", "/etc/dconf/db/local.d/01-orchis"],
+  ["../sysroot/etc/dconf/profile/user", "/etc/dconf/profile/user"],
+  ["../sysroot/etc/default/grub", "/etc/default/grub"],
+  ["../sysroot/etc/systemd/system/dconf-update.service", "/etc/systemd/system/dconf-update.service"],
+  ["../sysroot/etc/systemd/system/flatpak-automatic.service", "/etc/systemd/system/flatpak-automatic.service"],
+  ["../sysroot/etc/systemd/system/flatpak-automatic.timer", "/etc/systemd/system/flatpak-automatic.timer"],
+  ["../sysroot/etc/sysctl.conf", "/etc/sysctl.conf"]
 ]
 
 boot-location: modules
