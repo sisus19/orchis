@@ -1,0 +1,48 @@
+include: [
+  "fedora-common-ostree-pkgs.yaml",
+  "../packages/essential.yaml",
+  "../packages/flatpak.yaml",
+  "../packages/fonts.yaml",
+  "../packages/tools.yaml",
+]
+
+releasever: "37"
+automatic-version-prefix: "37"
+mutate-os-release: "${releasever}"
+
+repos:
+ - fedora
+ - fedora.updates
+ - rpmfusion.free
+ - rpmfusion.free.updates
+ - copr.kylegospo.gnome-vrr
+
+add-files: [
+  # /etc
+  ["sysroot/etc/dconf/db/local.d/01-orchis", "/etc/dconf/db/local.d/01-orchis"],
+  ["sysroot/etc/dconf/profile/user", "/etc/dconf/profile/user"],
+  ["sysroot/etc/default/grub", "/etc/default/grub"],
+  ["sysroot/etc/systemd/system/dconf-update.service", "/etc/systemd/system/dconf-update.service"],
+  ["sysroot/etc/systemd/system/flatpak-automatic.service", "/etc/systemd/system/flatpak-automatic.service"],
+  ["sysroot/etc/systemd/system/flatpak-automatic.timer", "/etc/systemd/system/flatpak-automatic.timer"],
+  ["sysroot/etc/sysctl.conf", "/etc/sysctl.conf"]
+]
+
+boot-location: modules
+check-groups:
+  type: file
+  filename: ../shared/group
+check-passwd:
+  type: file
+  filename: ../shared/passwd
+default_target: graphical.target
+documentation: true
+etc-group-members:
+  - wheel
+ignore-removed-users:
+  - root
+ignore-removed-groups:
+  - root
+postprocess-script: ../shared/postprocess.sh
+selinux: true
+tmp-is-dir: true

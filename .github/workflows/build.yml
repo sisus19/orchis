@@ -1,0 +1,32 @@
+name: build
+on:
+  schedule:
+    - cron: 0 2 * * *
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+       contents: read
+       packages: write
+       id-token: write
+    container:
+      image: docker.io/fedora:rawhide
+      # Fix SELinux for the built OSTree: https://github.com/coreos/rpm-ostree/issues/1943
+      options: --privileged --security-opt label:disable
+    steps:
+      - name: Install dependencies
+        run: dnf install -y rpm-ostree selinux-policy selinux-policy-targeted policycoreutils podman
+
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Login
+        run: podman login --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
+
+      - name: Build OSTree container image and push to registry
+        uses: Wandalen/wretry.action@master
+        with:
+          command: rpm-ostree compose image --initialize --format=registry ${{ steps.fmt.outputs.labels }} src/treefiles/orchis-desktop-gnome.yaml ghcr.io/sisus19/vauxite:latest
+          attempt_limit: 3
+          attempt_delay: 2000

@@ -1,0 +1,5 @@
+[submodule "lib/hosts"]
+	path = lib/hosts
+	url = https://github.com/StevenBlack/hosts/blob/master/alternates/fakenews-gambling-porn/hosts
+	branch = master
+

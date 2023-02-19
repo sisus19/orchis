@@ -1,0 +1,16 @@
+packages:
+ - adb
+ - buildah
+ - dbus-x11
+ - btop
+ - ffmpeg
+ - git-core
+ - gstreamer1-plugins-good-gtk
+ - lm_sensors
+ - meson
+ - podman
+ - scrcpy
+ - skopeo
+ - smartmontools
+ - toolbox
+ - zenity

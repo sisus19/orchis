@@ -1,0 +1,7 @@
+ref: fedora/37/${basearch}/orchis-blue
+rojig:
+  name: fedora-orchis
+  summary: "Fedora Gnome base image"
+  license: MIT
+include:
+  - ../cores/gnome.yaml

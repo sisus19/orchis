@@ -1,0 +1,11 @@
+# Runtime
+build/*
+src/sysroot/common/usr/lib/sodalite-buildinfo
+
+# Temporary
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+*.orig
