@@ -107,3 +107,6 @@ chmod 755 /usr/libexec/fedora-silverblue-readonly-sysroot
 
 # Enable the corresponding unit
 systemctl enable fedora-silverblue-readonly-sysroot.service
+
+#Script run
+./usr/libexec/orchis-post/custom.sh
