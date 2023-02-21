@@ -2,6 +2,5 @@ packages:
  - papirus-icon-theme
  - gnome-shell-extension-user-theme
  - gtk-murrine-engine 
- - openssl
  - sassc 
  - gnome-shell-extension-dash-to-dock
