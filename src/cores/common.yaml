@@ -48,6 +48,9 @@ ignore-removed-users:
   - root
 ignore-removed-groups:
   - root
-postprocess-script: ../shared/postprocess.sh
+postprocess-script: [
+  "../shared/postprocess.sh",
+  "../scripts/custom.sh",
+]
 selinux: true
 tmp-is-dir: true
