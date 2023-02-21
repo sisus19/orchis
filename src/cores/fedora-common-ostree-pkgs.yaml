@@ -237,3 +237,7 @@ packages:
   - zram-generator-defaults
 packages-x86_64:
   - alsa-sof-firmware
+exclude-packages:
+  - fedora-bookmarks
+  - fedora-chromium-config
+  - fedora-flathub-remote
