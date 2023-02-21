@@ -66,3 +66,4 @@ exclude-packages:
  - gnome-terminal
  - gnome-terminal-nautilus
  - yelp
+ - gnome-tour
