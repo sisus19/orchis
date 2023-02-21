@@ -59,3 +59,10 @@ packages:
  - xdg-desktop-portal-gtk
 exclude-packages:
  - gnome-software-rpm-ostree 
+ - gnome-classic-session
+ - gnome-remote-desktop
+ - gnome-session-xsession
+ - gnome-system-monitor
+ - gnome-terminal
+ - gnome-terminal-nautilus
+ - yelp
