@@ -26,7 +26,11 @@ add-files: [
   ["../sysroot/etc/systemd/system/dconf-update.service", "/etc/systemd/system/dconf-update.service"],
   ["../sysroot/etc/systemd/system/flatpak-automatic.service", "/etc/systemd/system/flatpak-automatic.service"],
   ["../sysroot/etc/systemd/system/flatpak-automatic.timer", "/etc/systemd/system/flatpak-automatic.timer"],
-  ["../sysroot/etc/sysctl.conf", "/etc/sysctl.conf"]
+  ["../sysroot/etc/sysctl.conf", "/etc/sysctl.conf"],
+  ["../sysroot/orchis-firstboot", "/usr/bin/orchis-firstboot"],
+  ["../sysroot/etc/profile.d/orchis-firstboot.sh", "/etc/profile.d/orchis-firstboot.sh"],
+  ["../sysroot/etc/skel.d/.config/autostart/orchis-firstboot.desktop", "/etc/skel.d/.config/autostart/orchis-firstboot.desktop"],
+  ["../sysroot/etc/justfile", "/etc/justfile"],
 ]
 
 boot-location: modules

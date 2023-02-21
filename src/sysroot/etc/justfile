@@ -1,0 +1,12 @@
+default:
+  @just --list
+
+bios:
+  systemctl reboot --firmware-setup
+
+changelogs:
+  rpm-ostree db diff --changelogs 
+ 
+update:
+  rpm-ostree update
+  flatpak update -y
