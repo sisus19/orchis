@@ -139,6 +139,8 @@ packages:
   - man-pages
   - mdadm
   - mesa-dri-drivers
+  - mesa-va-drivers-freeworld
+  - mesa-vdpau-drivers-freeworld
   - mesa-vulkan-drivers
   - mpage
   - mtr
