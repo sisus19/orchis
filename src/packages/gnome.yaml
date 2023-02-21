@@ -57,3 +57,5 @@ packages:
  - tracker-miners
  - xdg-desktop-portal-gnome
  - xdg-desktop-portal-gtk
+exclude-packages:
+ - gnome-software-rpm-ostree 
