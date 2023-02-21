@@ -1,5 +1,6 @@
 include: [
   "fedora-common-ostree-pkgs.yaml",
+  "../packages/themes.yaml",
   "../packages/essential.yaml",
   "../packages/flatpak.yaml",
   "../packages/fonts.yaml",
