@@ -2,7 +2,6 @@ packages:
  - libratbag-ratbagd
  - openssl
  - ffmpegthumbs 
- - kffmpegthumbnailer
  - gstreamer1-plugin-libav 
  - gstreamer1-plugins-bad-free-extras 
  - gstreamer1-plugins-bad-freeworld 
