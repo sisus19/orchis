@@ -31,6 +31,7 @@ add-files: [
   ["../sysroot/etc/profile.d/orchis-firstboot.sh", "/etc/profile.d/orchis-firstboot.sh"],
   ["../sysroot/etc/skel.d/.config/autostart/orchis-firstboot.desktop", "/etc/skel.d/.config/autostart/orchis-firstboot.desktop"],
   ["../sysroot/etc/justfile", "/etc/justfile"],
+  ["../scripts/custom.sh", "/usr/libexec/orchis-post/custom.sh"],
 ]
 
 boot-location: modules
@@ -48,9 +49,6 @@ ignore-removed-users:
   - root
 ignore-removed-groups:
   - root
-postprocess-script: [
-  "../shared/postprocess.sh",
-  "../scripts/custom.sh",
-]
+postprocess-script: ../shared/postprocess.sh
 selinux: true
 tmp-is-dir: true
