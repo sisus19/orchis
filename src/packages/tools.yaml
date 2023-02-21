@@ -1,4 +1,5 @@
 packages:
+ - fastfetch
  - adb
  - buildah
  - dbus-x11
