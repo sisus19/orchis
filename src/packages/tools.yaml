@@ -1,4 +1,6 @@
 packages:
+ - libratbag-ratbagd
+ - openssl
  - ffmpegthumbs 
  - kffmpegthumbnailer
  - gstreamer1-plugin-libav 
