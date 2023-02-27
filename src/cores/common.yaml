@@ -30,6 +30,7 @@ add-files: [
   ["../sysroot/etc/skel.d/.config/autostart/orchis-firstboot.desktop", "/etc/skel.d/.config/autostart/orchis-firstboot.desktop"],
   ["../sysroot/etc/justfile", "/etc/justfile"],
   ["../scripts/custom.sh", "/usr/libexec/orchis-post/custom.sh"],
+  ["../scripts/themes.sh", "/usr/libexec/orchis-post/themes.sh"],
   ["../sysroot/usr/lib/systemd/user/flatpak-user-update.service", "/usr/lib/systemd/user/flatpak-user-update.service"],
   ["../sysroot/usr/lib/systemd/user/flatpak-user-update.timer", "/usr/lib/systemd/user/flatpak-user-update.timer"],
   ["../sysroot/etc/udev/rules.d/71-microsoft-controllers.rules", "/etc/udev/rules.d/71-microsoft-controllers.rules"],

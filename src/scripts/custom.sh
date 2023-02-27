@@ -14,3 +14,4 @@ rm -f /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo
 rm -f /etc/yum.repos.d/rpmfusion-nonfree-steam.repo 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf 
+wget https://github.com/jerryn70/GoodbyeAds/raw/master/Hosts/GoodbyeAds.txt -O /etc/hosts

@@ -110,3 +110,5 @@ systemctl enable fedora-silverblue-readonly-sysroot.service
 
 #Script run
 ./usr/libexec/orchis-post/custom.sh
+
+./usr/libexec/orchis-post/themes.sh
