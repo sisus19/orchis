@@ -32,6 +32,7 @@ add-files: [
   ["../scripts/custom.sh", "/usr/libexec/orchis-post/custom.sh"],
   ["../sysroot/usr/lib/systemd/user/flatpak-user-update.service", "/usr/lib/systemd/user/flatpak-user-update.service"],
   ["../sysroot/usr/lib/systemd/user/flatpak-user-update.timer", "/usr/lib/systemd/user/flatpak-user-update.timer"],
+  ["../sysroot/etc/udev/rules.d/71-microsoft-controllers.rules", "/etc/udev/rules.d/71-microsoft-controllers.rules"],
 ]
 
 boot-location: modules
