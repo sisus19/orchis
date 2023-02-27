@@ -69,20 +69,20 @@ if [ "$?" != 0 ] ; then
 fi
 echo "85"
 
-echo "# Installing OnlyOffice"
-/usr/bin/flatpak install --user --noninteractive flathub org.onlyoffice.desktopeditors
-if [ "$?" != 0 ] ; then
-        zenity --error \
-          --text="Installing OnlyOffice Failed"
-        exit 1
-fi
-echo "90"
-
 echo "# Installing Extension Manager"
 /usr/bin/flatpak install --user --noninteractive flathub com.mattjakeman.ExtensionManager
 if [ "$?" != 0 ] ; then
         zenity --error \
           --text="Installing Extension Manager Failed"
+        exit 1
+fi
+echo "90"
+
+echo "Enabling Flatpak auto update"
+/usr/bin/systemctl --user enable --now flatpak-user-update.timer
+if [ "$?" != 0 ] ; then
+        zenity --error \
+          --text="Setting Flatpak Autoupdate Failed"
         exit 1
 fi
 echo "100"

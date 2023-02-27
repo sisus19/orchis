@@ -2,7 +2,6 @@
 
 sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf 
 systemctl enable rpm-ostreed-automatic.timer 
-systemctl enable flatpak-automatic.timer 
 systemctl unmask dconf-update.service 
 systemctl enable dconf-update.service 
 systemctl enable rpm-ostree-countme.service 
