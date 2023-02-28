@@ -14,4 +14,5 @@ rm -f /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo
 rm -f /etc/yum.repos.d/rpmfusion-nonfree-steam.repo 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf 
-wget -4 https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/hosts/ultimate.txt -O /etc/hosts
+sed -i '/nameserver/c\nameserver 9.9.9.11' /etc/resolv.conf
+wget https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/hosts/ultimate.txt -O /etc/hosts
