@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -xeuo pipefail
 
+#Script run
+./usr/libexec/orchis-post/custom.sh
+
+./usr/libexec/orchis-post/themes.sh
+
 # Setup unit & script for readonly sysroot migration:
 # - https://fedoraproject.org/wiki/Changes/Silverblue_Kinoite_readonly_sysroot
 # - https://bugzilla.redhat.com/show_bug.cgi?id=2060976
@@ -107,8 +112,3 @@ chmod 755 /usr/libexec/fedora-silverblue-readonly-sysroot
 
 # Enable the corresponding unit
 systemctl enable fedora-silverblue-readonly-sysroot.service
-
-#Script run
-./usr/libexec/orchis-post/custom.sh
-
-./usr/libexec/orchis-post/themes.sh
