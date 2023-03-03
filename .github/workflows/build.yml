@@ -17,7 +17,10 @@ jobs:
     steps:
       - name: Install dependencies
         run: dnf install -y rpm-ostree selinux-policy selinux-policy-targeted policycoreutils podman
-
+      - run: |
+          sed -i '/nameserver/c\nameserver 9.9.9.11' /etc/resolv.conf
+          systemctl restart systemd-resolved.service
+        
       - name: Clone repository
         uses: actions/checkout@v3
 
