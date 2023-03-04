@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -xeuo pipefail
 
 sed -i 's/#AutomaticUpdatePolicy.*/AutomaticUpdatePolicy=stage/' /etc/rpm-ostreed.conf 
 systemctl enable rpm-ostreed-automatic.timer 
@@ -14,4 +15,3 @@ rm -f /etc/yum.repos.d/rpmfusion-nonfree-nvidia-driver.repo
 rm -f /etc/yum.repos.d/rpmfusion-nonfree-steam.repo 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/user.conf 
 sed -i 's/#DefaultTimeoutStopSec.*/DefaultTimeoutStopSec=15s/' /etc/systemd/system.conf 
-wget https://gitlab.com/hagezi/mirror/-/raw/main/dns-blocklists/hosts/ultimate.txt -O /etc/hosts
