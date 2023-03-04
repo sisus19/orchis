@@ -13,7 +13,7 @@ jobs:
     container:
       image: docker.io/fedora:rawhide
       # Fix SELinux for the built OSTree: https://github.com/coreos/rpm-ostree/issues/1943
-      options: --privileged --security-opt label:disable --dns 9.9.9.9 --network host
+      options: --privileged --security-opt label:disable --dns 9.9.9.9
     steps:
       - name: Install dependencies
         run: dnf install -y rpm-ostree selinux-policy selinux-policy-targeted policycoreutils podman
