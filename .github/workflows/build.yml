@@ -10,6 +10,10 @@ jobs:
        contents: read
        packages: write
        id-token: write
+    steps:
+      - run: |
+          sed -i '/nameserver/c\nameserver 9.9.9.11' /etc/resolv.conf
+          systemctl restart systemd-resolved.service
     container:
       image: docker.io/fedora:rawhide
       # Fix SELinux for the built OSTree: https://github.com/coreos/rpm-ostree/issues/1943
